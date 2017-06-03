@@ -1,0 +1,5 @@
+FROM maven:3.5.0-jdk-8-alpine
+EXPOSE 8080
+ADD java-echo-service /echo-service
+WORKDIR /echo-service
+CMD ["mvn", "spring-boot:run"]
